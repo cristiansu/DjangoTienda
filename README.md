@@ -11,7 +11,7 @@
 * Ver lista de categorías: template que permite ver en formato tabla todas las categorías existentes. Incluye un buscador
 ![My Image](listaCategorias.png)
 * Crear productos: Formulario para crear productos, enlazando a su categoría como foreingkey, con diversos atributos y una imagen.
-![My Image](crearProductos.png)
+![My Image](crearProducto.png)
 * Ver productos: template que permite ver los productos en formato tarjeta
 ![My Image](listaProductos.png)
 * Dashboard: template que muestra la cantidad de usuarios, cantidad de categorías y productos. 
