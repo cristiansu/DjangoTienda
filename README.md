@@ -17,7 +17,9 @@
 * Dashboard: template que muestra la cantidad de usuarios, cantidad de categorías y productos. 
 ![My Image](dashboard.png)
 * Login: Formulario permite ingresar credenciales para hacer el login
+![My Image](login-img.png)
 * Bienvenida usuario logeado : Alerta en dashboard inicial da la bienvenida al usuario que ingresó desde el login.
+![My Image](bienvenida-logeado.png)
 * Logout : Template mostrado luego que el usuario hace clic desde el botón logout, sea en sidebar o bien desde el menú usuario, esquina superior derecha.
 * Crear usuarios: Formulario permite crear usuarios
 
