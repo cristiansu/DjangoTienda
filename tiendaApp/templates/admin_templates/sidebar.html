@@ -47,11 +47,25 @@
           
           </ul>
         </li>   
+
+        {% comment %}Crear Usuario{% endcomment %}
+        
+        {% url 'register' as 'registro' %}
+
+        <li class="dropdown {% if request.path == product_list %} active {% endif %}">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Usuarios</span></a>
+
+          <ul class="dropdown-menu">
+
+            <li class="{% if request.path == registro %} active {% endif %}"><a class="nav-link" href="{% url 'register' %}">Crear Usuario</a></li>
+          
+          </ul>
+        </li>  
           
       </ul>
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-        <a href="#" class="btn btn-primary btn-lg btn-block btn-icon-split">
+        <a href="{% url 'logout' %}" class="btn btn-primary btn-lg btn-block btn-icon-split">
           <i class="fas fa-rocket"></i> Logout
         </a>
       </div>        </aside>

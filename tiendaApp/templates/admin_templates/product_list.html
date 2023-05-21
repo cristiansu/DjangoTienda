@@ -37,7 +37,8 @@ Lista de Productos
                     <span class="custom-switch-description">Activo</span>
                 </label>
                 <div class="article-cta">
-                  <a href="#" class="btn btn-warning">Editar <i class="fas fa-chevron-right"></i></a>
+                  <a href="{% url 'product_update' prod.id %}" class="btn btn-warning">Editar <i class="fas fa-chevron-right"></i></a>
+                  <a href="{% url 'product_eliminar' prod.id %}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-times"></i> Eliminar</a>
                 </div>
               </div>
             </article>

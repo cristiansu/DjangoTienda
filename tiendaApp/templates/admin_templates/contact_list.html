@@ -2,7 +2,7 @@
 
 <!-- block titulo -->
 {% block title %}
-CategoryList
+ContactList
 {% endblock title %}
 
 <!-- block css personalizado -->
@@ -11,7 +11,7 @@ CategoryList
 
 <!-- block título de página -->
 {% block page_title %}
-Lista Categorias
+Lista de Mensajes Formulario de Contacto
 {% endblock page_title %}
 <!-- block contenido principal -->
 {% block page_content %}
@@ -35,8 +35,8 @@ Lista Categorias
           <div class="card">
             <div class="card-body">
               <b>Ordenar por: - </b>
-              <a href="{% url 'category_list' %}?filter={{ filter }}&orderby=id">Id</a> |
-              <a href="{% url 'category_list' %}?filter={{ filter }}&orderby=nombre">Categoria</a> |
+              <a href="{% url 'contacto_lista' %}?filter={{ filter }}&orderby=id">Id</a> |
+              <a href="{% url 'contacto_lista' %}?filter={{ filter }}&orderby=nombre">Nombre</a> |
             </div>  
           </div>
         </div>
@@ -49,17 +49,21 @@ Lista Categorias
         <table class="table table-striped">
           <tbody><tr>
             <th>ID</th>
-            <th>Categoría</th>
+            <th>Nombre</th>
+            <th>TipoConsulta</th>
+            <th>Mensaje</th>
             <th>Opciones</th>
           </tr>
-          {% for category in category_list %}
+          {% for cto in contact_list %}
           <tr>
-            <td><a href="#">{{category.id}}</a></td>
-            <td class="font-weight-600">{{category.nombre}}</td>
+            <td><a href="#">{{cto.id}}</a></td>
+            <td class="font-weight-600">{{cto.nombre}}</td>
+            <td class="font-weight-600">{{cto.tipo_consulta}}</td>
+            <td class="font-weight-600">{{cto.mensaje}}</td>
             <td>
-              <a href="{% url 'category_update' category.id %}" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Editar</a>
+              <a href="#" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i> Editar</a>
               
-              <a href="{% url 'category_eliminar' category.id %}" class="btn btn-icon icon-left btn-danger"><i class="fas fa-times"></i> Eliminar</a>
+              <a href="#" class="btn btn-icon icon-left btn-danger"><i class="fas fa-times"></i> Eliminar</a>
             </td>
           </tr>
           {% endfor %}

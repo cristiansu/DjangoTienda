@@ -11,8 +11,8 @@ CategoryUpdate
 
 <!-- block título de página -->
 {% block page_title %}
-Editar Categoría
-<a href="{% url 'category_list' %}" class="btn btn-icon icon-left btn-warning"><i class="far fa-edit"></i> Cancelar</a>
+Editar Producto
+<a href="{% url 'product_list' %}" class="btn btn-icon icon-left btn-warning"><i class="far fa-edit"></i> Cancelar</a>  
 {% endblock page_title %}
 
 <!-- block contenido principal -->
@@ -47,7 +47,8 @@ Editar Categoría
                     </div>
                     {% endif %}
                 {% endfor %}
-                <button type="submit" class="btn btn-primary btn-block">Guardar</button>    
+                <button type="submit" class="btn btn-primary btn-block">Guardar</button> 
+                 
                 </form>
             </div>
         </div>  

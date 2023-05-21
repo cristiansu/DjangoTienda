@@ -2,7 +2,7 @@
 
 <!-- block titulo -->
 {% block title %}
-CategoryUpdate
+FormContacto
 {% endblock title %}
 
 <!-- block css personalizado -->
@@ -11,8 +11,7 @@ CategoryUpdate
 
 <!-- block título de página -->
 {% block page_title %}
-Editar Categoría
-<a href="{% url 'category_list' %}" class="btn btn-icon icon-left btn-warning"><i class="far fa-edit"></i> Cancelar</a>
+Formulario de Contacto
 {% endblock page_title %}
 
 <!-- block contenido principal -->
@@ -21,7 +20,7 @@ Editar Categoría
     <div class="col-12 col-md-12 col-lg-12">
         <div class="card">
             <div class="card-header">
-                <h4>Categorias</h4>
+                <h4>Formulario de Contacto</h4>
             </div>
             <div class="card-body">
                 <form action="" method="post" enctype="multipart/form-data">
@@ -29,26 +28,16 @@ Editar Categoría
                 {% for field in form %}
                 <div class="form-group">
                 <label>{{ field.label }}</label>
-                <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" id="{{ field.name }}" class="form-control" value={{field.value}}>
+                <input type="{{ field.field.widget.input_type }}" name="{{ field.name }}" id="{{ field.name }}" class="form-control">
                 {% if field.errors %}
                 <div class="alert alert-danger" style="margin: 10px;">
                     {{ field.errors }}
                 </div>
                 {% endif %}
                 </div>
-                    {% if field.field.widget.input_type == 'file' %}
-                    <div class="form-group">
-                        <label for="">Actual {{field.label}} </label><br>
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="/media/{{ field.value }}" alt="" style="height: 250px;"/>
-                            </div>
-                        </div>                        
-                    </div>
-                    {% endif %}
                 {% endfor %}
-                <button type="submit" class="btn btn-primary btn-block">Guardar</button>    
-                </form>
+            <button type="submit" class="btn btn-primary btn-block">Enviar</button>    
+            </form>
             </div>
         </div>  
     </div> 

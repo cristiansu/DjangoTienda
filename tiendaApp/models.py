@@ -36,6 +36,7 @@ opciones_consultas=[
     [3,'felicitaciones']
 ]
 class Contact(models.Model):
+    id=models.AutoField(primary_key=True,blank=True)
     nombre=models.CharField(max_length=50)
     correo=models.EmailField()
     tipo_consulta=models.IntegerField(choices=opciones_consultas)
