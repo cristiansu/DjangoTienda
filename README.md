@@ -21,7 +21,9 @@
 * Bienvenida usuario logeado : Alerta en dashboard inicial da la bienvenida al usuario que ingresó desde el login.
 ![My Image](bienvenida-logeado.png)
 * Logout : Template mostrado luego que el usuario hace clic desde el botón logout, sea en sidebar o bien desde el menú usuario, esquina superior derecha.
+![My Image](logout-img.png)
 * Crear usuarios: Formulario permite crear usuarios
+![My Image](crear-usuario-img.png)
 
 ## Requerimientos
 
